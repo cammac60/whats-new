@@ -8,7 +8,7 @@ const NewsArticle = props => {
         <img src={story.img} className="article-img"/>
         <h3 className="article-head">{story.headline}</h3>
         <p className="article-body">{story.description}</p>
-        <button type="button" className="article-link">View Article</button>
+        <button type="button" className="article-link">View Article >>></button>
       </article>
     )
   });
