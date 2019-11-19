@@ -6,6 +6,7 @@ import science from '../../data/science';
 import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import Menu from '../Menu/Menu'
 
 class App extends Component {
   constructor() {
@@ -18,7 +19,7 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-      test
+        <Menu />
         <NewsContainer data={this.state}/>
       </div>
     );
