@@ -1,9 +1,24 @@
 .article-wrap {
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
   width: 80%;
 }
 
 .article-img {
-  max-height: 400px;
+  max-height: 250px;
   max-width: 100%;
+  padding: 20px;
+}
+
+.article-body {
+  padding: 10px;
+}
+
+.article-link {
+  display: block;
+  height: 50px;
+  margin-top: auto;
+  width: 100%;
 }
