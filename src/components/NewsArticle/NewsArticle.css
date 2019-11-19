@@ -1,0 +1,9 @@
+.article-wrap {
+  background-color: white;
+  width: 80%;
+}
+
+.article-img {
+  max-height: 400px;
+  max-width: 100%;
+}

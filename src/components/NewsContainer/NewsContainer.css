@@ -1,0 +1,6 @@
+.news-container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 1000px;
+}
