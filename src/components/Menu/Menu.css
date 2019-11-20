@@ -8,5 +8,6 @@ nav {
 
 .nav-option {
   color: white;
+  cursor: pointer;
   margin-bottom: 20px;
 }

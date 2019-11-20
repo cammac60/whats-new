@@ -19,10 +19,20 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <Menu />
+        <Menu changeNewsType={this.changeNewsType}
+        local={local}
+        entertainment={entertainment}
+        health={health}
+        science={science}
+        technology={technology}
+        />
         <NewsContainer data={this.state}/>
       </div>
     );
+  }
+
+  changeNewsType = (prop) => {
+    this.setState({articles: prop});
   }
 }
 
