@@ -35,9 +35,19 @@ class App extends Component {
     );
   }
 
-  changeNewsType = (prop) => {
-    this.setState({articles: prop});
+  toggleSelectedNewsStyle = (id) => {
+    let options = document.getElementsByClassName('nav-option');
+    Array.from(options).forEach(option => {
+      option.style.backgroundColor = '#141527';
+    });
+    document.getElementById(id).style.backgroundColor = '#DD5454';
   }
+
+  changeNewsType = (prop, id) => {
+    this.setState({articles: prop});
+    this.toggleSelectedNewsStyle(id);
+  }
+
 }
 
 export default App;

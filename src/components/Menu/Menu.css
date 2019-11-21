@@ -13,7 +13,6 @@ nav {
   margin-bottom: 20px;
 }
 
-.selected-option {
+.nav-option:target {
   background-color: #DD5454;
-  color: black;
 }
