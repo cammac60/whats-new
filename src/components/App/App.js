@@ -20,7 +20,7 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <SearchForm />
+        <SearchForm searchFn={this.returnSearchResults}/>
         <main>
           <Menu changeNewsType={this.changeNewsType}
           local={local}
@@ -46,6 +46,18 @@ class App extends Component {
   changeNewsType = (prop, id) => {
     this.setState({articles: prop});
     this.toggleSelectedNewsStyle(id);
+  }
+
+  returnSearchResults = () => {
+    let userQuery = document.getElementById('search-input').value;
+    let results = this.state.articles.filter(story => {
+        if (story.headline.search(userQuery) !== -1 || story.description.search(userQuery) !== -1) {
+          return story;
+        }
+      });
+    if (results.length > 0) {
+      this.setState({articles: results});
+    }
   }
 
 }
