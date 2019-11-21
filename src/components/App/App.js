@@ -29,7 +29,7 @@ class App extends Component {
           science={science}
           technology={technology}
           />
-          <NewsContainer data={this.state}/>
+          <NewsContainer data={this.state.articles} />
         </main>
       </div>
     );

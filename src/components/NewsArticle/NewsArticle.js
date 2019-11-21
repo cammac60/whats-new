@@ -2,7 +2,7 @@ import React from 'react';
 import './NewsArticle.css';
 
 const NewsArticle = props => {
-  return props.data.data.articles.map(story => {
+  return props.data.data.map(story => {
     return (
       <section className="article-wrap">
         <img src={story.img} className="article-img"/>
