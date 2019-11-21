@@ -10,10 +10,9 @@ describe('App', () => {
 
   it('should update state with new articles when changeNewsType is called', () => {
     const wrapper = shallow(<App />);
-    const mockNews = health;
     wrapper.instance().toggleSelectedNewsStyle = jest.fn();
     expect(wrapper.state('articles')).toEqual(local);
-    wrapper.instance().changeNewsType(mockNews, 'health');
+    wrapper.instance().changeNewsType(health, 'health');
     expect(wrapper.state('articles')).toEqual(health);
   });
 
