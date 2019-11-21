@@ -5,7 +5,7 @@ import Menu from './Menu.js'
 import local from '../../data/local'
 
 describe('Menu', () => {
-  it('should invoke the changeNewsType fn with the correct argument', () => {
+  it('should invoke the changeNewsType fn with the correct arguments on click', () => {
     const changeNewsTypeMock = jest.fn();
     const wrapper = shallow(<Menu
       changeNewsType={changeNewsTypeMock}
