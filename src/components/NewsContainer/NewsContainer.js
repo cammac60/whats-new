@@ -11,5 +11,4 @@ const NewsContainer = props => {
   );
 }
 
-
 export default NewsContainer;
