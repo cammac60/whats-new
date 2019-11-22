@@ -1,5 +1,6 @@
 nav {
   background-color: #141527;
+  min-height: 100vh;
   padding-left: 20px;
   padding-top: 150px;
   text-align: left;
@@ -9,7 +10,7 @@ nav {
 .nav-option {
   color: white;
   cursor: pointer;
-  height: 3%;
+  height: 70px;
   margin-bottom: 20px;
 }
 
