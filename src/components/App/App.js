@@ -52,16 +52,17 @@ class App extends Component {
   }
 
   returnSearchResults = () => {
-    let userQuery = document.getElementById('search-input').value;
+    let userQuery = document.getElementById('search-input');
     let results = this.state.articles.filter(story => {
-        if (story.headline.search(userQuery) !== -1 || story.description.search(userQuery) !== -1) {
+        if (story.headline.search(userQuery.value) !== -1 || story.description.search(userQuery.value) !== -1) {
           return story;
         }
       });
-    if (results.length > 0 && userQuery) {
+    if (results.length > 0 && userQuery.value) {
       this.setState({articles: results});
+      userQuery.value = '';
     } else {
-      console.log('no result');
+      userQuery.style.border = '1px solid red';
     }
   }
 
