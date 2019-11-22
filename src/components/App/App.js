@@ -55,8 +55,10 @@ class App extends Component {
           return story;
         }
       });
-    if (results.length > 0) {
+    if (results.length > 0 && userQuery) {
       this.setState({articles: results});
+    } else {
+      console.log('no result');
     }
   }
 
