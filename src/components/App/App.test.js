@@ -16,4 +16,12 @@ describe('App', () => {
     expect(wrapper.state('articles')).toEqual(health);
   });
 
+  it('should update state when a search is entered', () => {
+    const wrapper = shallow(<App />);
+    document.body.innerHTML =
+    '<input id="search-input" value="Chicken">' +
+    '</input>';
+    wrapper.instance().returnSearchResults();
+    expect(wrapper.state('articles')).toEqual([local[1]]);
+  })
 });
