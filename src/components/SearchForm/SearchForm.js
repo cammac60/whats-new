@@ -7,7 +7,7 @@ const SearchForm = props => {
       <h1>Whats<span>New</span></h1>
       <div id="input-wrap">
         <input onChange={props.resetError} id="search-input" type="text" placeholder="Search for a story..."></input>
-        <label id="search-error" name="search-error">No results. Please try again</label>
+        <label id="search-error" name="search-error">No results. Please try again.</label>
       </div>
       <button onClick={props.searchFn} className="search-btn" type="button">Search</button>
     </header>
