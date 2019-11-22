@@ -23,6 +23,7 @@ class App extends Component {
         <SearchForm
           searchFn={this.returnSearchResults}
           resetError={this.resetInputError}
+          enterKeyListener={this.enterKeyListener}
         />
         <main>
           <Menu changeNewsType={this.changeNewsType}
@@ -73,6 +74,12 @@ class App extends Component {
   resetInputError = () => {
     document.getElementById('search-input').style.border = '1px solid white';
     document.getElementById('search-error').style.display = 'none';
+  }
+
+  enterKeyListener = (event) => {
+    if (event.key === 'Enter') {
+      this.returnSearchResults();
+    }
   }
 
 }
