@@ -20,7 +20,10 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <SearchForm searchFn={this.returnSearchResults}/>
+        <SearchForm
+          searchFn={this.returnSearchResults}
+          resetError={this.resetInputError}
+        />
         <main>
           <Menu changeNewsType={this.changeNewsType}
           local={local}
@@ -63,7 +66,13 @@ class App extends Component {
       userQuery.value = '';
     } else {
       userQuery.style.border = '1px solid red';
+      document.getElementById('search-error').style.display = 'block';
     }
+  }
+
+  resetInputError = () => {
+    document.getElementById('search-input').style.border = '1px solid white';
+    document.getElementById('search-error').style.display = 'none';
   }
 
 }
