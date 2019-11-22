@@ -37,10 +37,13 @@ class App extends Component {
 
   toggleSelectedNewsStyle = (id) => {
     let options = document.getElementsByClassName('nav-option');
+    let selected = document.getElementById(id);
     Array.from(options).forEach(option => {
       option.style.backgroundColor = '#141527';
+      option.style.boxShadow = 'none';
     });
-    document.getElementById(id).style.backgroundColor = '#DD5454';
+    selected.style.backgroundColor = '#DD5454';
+    selected.style.boxShadow = '-7px -7px 3px #3A3C4F';
   }
 
   changeNewsType = (prop, id) => {
