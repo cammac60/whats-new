@@ -13,7 +13,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      articles: local
+      articles: local,
+      category: local
     }
   }
 
@@ -51,19 +52,26 @@ class App extends Component {
   }
 
   changeNewsType = (prop, id) => {
-    this.setState({articles: prop});
+    this.setState({
+      articles: prop,
+      category: prop
+    });
     this.toggleSelectedNewsStyle(id);
   }
 
   returnSearchResults = () => {
     let userQuery = document.getElementById('search-input');
-    let results = this.state.articles.filter(story => {
-        if (story.headline.search(userQuery.value) !== -1 || story.description.search(userQuery.value) !== -1) {
-          return story;
-        }
-      });
+    let results = this.state.category.filter(story => {
+      if (story.headline.search(userQuery.value) !== -1 || story.description.search(userQuery.value) !== -1) {
+        return story;
+      }
+    });
     if (results.length > 0 && userQuery.value) {
-      this.setState({articles: results});
+      let curCategory = this.state.category;
+      this.setState({
+        articles: results,
+        category: curCategory
+      });
       userQuery.value = '';
     } else {
       userQuery.style.border = '1px solid red';
