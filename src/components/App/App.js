@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   render () {
+    console.log(this.state);
     return (
       <div className="app">
         <SearchForm
@@ -84,10 +85,17 @@ class App extends Component {
     document.getElementById('search-error').style.display = 'none';
   }
 
-  enterKeyListener = (event) => {
+  enterKeyListener = event => {
     if (event.key === 'Enter') {
       this.returnSearchResults();
     }
+  }
+
+  fetchData = newsType => {
+    return fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+    .then(response => response.json())
+    .then(json => json[newsType])
+    .catch(error => console.log(error))
   }
 
 }
