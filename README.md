@@ -13,7 +13,7 @@
   
 ### How To Use
   
-  https://user-images.githubusercontent.com/47998896/69463479-e7697800-0d38-11ea-8bf7-4d850e689306.png
+  <img width="1436" alt="Screen Shot 2019-11-22 at 1 19 55 PM" src="https://user-images.githubusercontent.com/47998896/69463841-09172f00-0d3a-11ea-8534-c1a8e08da252.png">
   
 The articles will default to showing local news, simply select any other tab in the menu on the left to filter news by that type. The search bar can also be used to search further and only articles in the currently selected category will be searched. 
 
